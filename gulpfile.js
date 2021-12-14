@@ -18,12 +18,14 @@ $.tasks.forEach( tasksPath => {
 exports.fonts = $.gulp.series('fonts', 'cleanFonts')
 
 exports.build = $.gulp.series(
-    $.gulp.parallel('clean'),
-    $.gulp.parallel('views', 'styles', 'scripts')
+    'clean',
+    $.gulp.parallel('views', 'styles', 'scripts', 'fonts'),
+    'cleanFonts'
 )
 
 exports.default = $.gulp.series(
     'clean',
-    $.gulp.parallel('views', 'styles', 'scripts'),
+    $.gulp.parallel('views', 'styles', 'scripts', 'fonts'),
+    'cleanFonts',
     $.gulp.parallel('watch', 'serve')
 )

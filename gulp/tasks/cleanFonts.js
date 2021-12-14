@@ -2,14 +2,16 @@ module.exports = function () {
     $.gulp.task('cleanFonts', () => {
         return $.del(
             [
-                $.paths.fonts.dist
+                $.paths.fonts.src + '*.{ttf,woff,woff2}'
             ],
             {
                 force: true, //удаление файлов за пределами каталога
             },
         )
             .then(path => {
-                console.log('Deleted directories:\n',path.join('\n '))
+                if ( path.length > 0 )
+                    console.log('Deleted files in directories:\n', path.join('\n '))
+                else console.log('No new fonts')
             })
             
     })

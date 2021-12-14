@@ -15,9 +15,9 @@ module.exports = {
         watch: './src/scripts/**/*.js'
     },
     fonts: {
-        src: './src/fonts/',
+        src: './src/assets/fonts/',
         dist: './dist/public/assets/fonts/',
-        watch: './src/fonts/*.{ttf,woff,woff2}'
+        watch: './src/assets/fonts/*.{ttf,woff,woff2}'
     }
 }
 
