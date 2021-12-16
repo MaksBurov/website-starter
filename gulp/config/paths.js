@@ -18,6 +18,11 @@ module.exports = {
         src: './src/assets/fonts/',
         dist: './dist/public/assets/fonts/',
         watch: './src/assets/fonts/*.{ttf,woff,woff2}'
+    },
+    images: {
+        src: './src/assets/images/',
+        dist: './dist/public/assets/images/',
+        watch: './src/assets/images/**/*.{png,jpg,gif,svg}'
     }
 }
 

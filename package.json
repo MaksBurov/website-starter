@@ -1,12 +1,13 @@
 {
   "name": "website-starter",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "gulp + webpack",
   "main": "index.js",
   "scripts": {
     "start": "gulp",
     "build": "gulp build --build",
     "fonts": "gulp fonts",
+    "images": "gulp images",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "MaksPopov",
@@ -22,6 +23,7 @@
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
     "gulp-load-plugins": "^2.0.6",
     "gulp-notify": "^4.0.0",
     "gulp-plumber": "^1.2.1",
@@ -33,10 +35,14 @@
     "gulp-ttf2woff": "^1.1.1",
     "gulp-ttf2woff2": "^4.0.1",
     "gulp-uglify": "^3.0.2",
+    "gulp-webp": "^4.0.1",
+    "imagemin-jpeg-recompress": "^7.0.0",
+    "imagemin-pngquant": "^9.0.2",
     "postcss": "^8.3.0",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-sort-media-queries": "^3.10.11",
     "sass": "^1.36.0",
+    "svgo": "^2.8.0",
     "vinyl-named": "^1.1.0",
     "webpack": "^5.52.0",
     "webpack-stream": "^6.1.2",
@@ -49,5 +55,6 @@
   "bugs": {
     "url": "https://github.com/PopovMaksim/website-starter/issues"
   },
-  "homepage": "https://github.com/PopovMaksim/website-starter#readme"
+  "homepage": "https://github.com/PopovMaksim/website-starter#readme",
+  "dependencies": {}
 }
