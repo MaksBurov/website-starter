@@ -16,18 +16,38 @@ textarea {
     background-color: unset;
 }
 
-a,
+/*a,
 input,
 button {
     appearance: none;
-}
-
-html {
-    scroll-behavior: smooth;
-}
+}*/
 
 body {
+    min-height: 100vh;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased; //Отключение субпиксельного сглаживания на MacOS
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: calc(1em + 0.5rem);
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+
+
+.container {
+    max-width: 1240px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.svg-sprite {
+    position: absolute;
+    width: 0;
+    height: 0;
 }
 
 .visually-hidden {
@@ -38,18 +58,6 @@ body {
     margin: -1px;
 }
 
-.svg-sprite {
-    position: absolute;
-    width: 0;
-    height: 0;
-}
-
 .no-wrap {
     white-space: nowrap;
-}
-
-.container {
-    max-width: 1240px;
-    padding: 0 20px;
-    margin: 0 auto;
 }
