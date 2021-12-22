@@ -18,7 +18,11 @@ module.exports = function () {
                 errorHandler: onError
             })) 
 
+           //Сохранение исходных изображений
+           .pipe($.gulp.dest($.paths.sources.images))
+
             //Минификация изображений
+           .pipe($.gulp.src($.paths.images.src + '**/*.{png,jpg,svg,gif}'))
            .pipe($.glp.imagemin([
                 $.glp.imagemin.gifsicle({interlaced: true}),
                 imageminJpegRecompress({
@@ -43,5 +47,7 @@ module.exports = function () {
                method: 6 //параметр контролирует компромисс между скоростью кодирования и размером и качеством сжатого файла (6 - самый медленный)
            }))
            .pipe($.gulp.dest($.paths.images.dist))
+
+
     })
 }

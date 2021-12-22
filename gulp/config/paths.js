@@ -23,6 +23,10 @@ module.exports = {
         src: './src/assets/images/',
         dist: './dist/public/assets/images/',
         watch: './src/assets/images/**/*.{png,jpg,gif,svg}'
+    },
+    sources: {
+        images: './src/assets/sources/images/',
+        fonts: './src/assets/sources/fonts',
     }
 }
 

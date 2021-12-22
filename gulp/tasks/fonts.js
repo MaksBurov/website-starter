@@ -3,6 +3,10 @@ module.exports = function () {
         return $.gulp.src($.paths.fonts.src + '*.ttf')
             .pipe($.gulp.dest($.paths.fonts.dist))
 
+            //Сохранение исходных шрифтов
+            .pipe($.gulp.src($.paths.fonts.src + '*.{ttf,woff,woff2}'))
+            .pipe($.gulp.dest($.paths.sources.fonts))
+
             .pipe($.glp.ttf2woff())
             .pipe($.gulp.dest($.paths.fonts.dist))
 

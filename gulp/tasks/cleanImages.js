@@ -2,7 +2,7 @@ module.exports = function () {
     $.gulp.task('cleanImages', () => {
         return $.del(
             [
-                $.paths.images.src + '*.{jpg,png,gif,svg}'
+                $.paths.images.src + '**/*'
             ],
             {
                 force: true, //удаление файлов за пределами каталога
